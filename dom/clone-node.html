@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+	<head>
+		<title>JS Programmer's reference</title>
+	</head>
+	<body>
+	<p id="firstParagraph">This is my paragraph!</p>
+  <p id="secondParagraph">This is my 2nd paragraph!<br />
+  <a href="http://www.iklanbaris.co.id">Iklanbaris</a>
+  </p>
+	<script>
+  var myParagraph = document.querySelector("#firstParagraph");
+  var myNewList = document.createElement("ul");
+  var myNewListItemTemplate = document.createElement("li");
+  var myNewListItem = myNewListItemTemplate.cloneNode();
+
+  myNewListItem.classList.add("menuitem");
+  myNewListItem.innerText = "Satu";
+  myNewList.appendChild(myNewListItem);
+
+  myNewListItem = myNewListItemTemplate.cloneNode();
+  myNewListItem.innerText = "Dua";
+  myNewList.appendChild(myNewListItem);
+
+  myParagraph.appendChild(myNewList);
+  // now i want to copy link from 2nd paragraph to 1st paragraph
+  var secondPar = document.getElementById("secondParagraph");
+  var secondParLink = document.querySelector("#secondParagraph a");
+  myParagraph.appendChild(secondParLink);
+  var firstParLink = secondParLink.cloneNode(true);
+  secondPar.appendChild(firstParLink);
+  // try to create a link element
+  var targetLinkTemplate = document.createElement("a");
+  targetLinkTemplate.innerText = "KetawaKetiwi";
+  var newTargetLink = targetLinkTemplate.cloneNode();
+  newTargetLink.innerText = "Kongkow.com";
+  secondPar.appendChild(newTargetLink);
+  var deepTargetLink = targetLinkTemplate.cloneNode(true);
+  secondPar.appendChild(deepTargetLink);
+	</script>
+	</body>
+</html>

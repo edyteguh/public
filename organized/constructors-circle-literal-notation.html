@@ -1,0 +1,35 @@
+<html>
+<head>
+<script type="text/javascript">
+// create object with literal notation
+function createCircleWithLiteralNotation() {
+	var myCircle = {
+		radius : 10,
+		_pi : 3.141,
+		diameter : function() {
+			var result= 2 * this.radius;
+			return result;
+		},
+		circumference : function() {
+			var result= 2 * this._pi * this.radius;
+			return result;
+		},
+		area : function() {
+			var result= this._pi * this.radius * this.radius;
+			return result;
+		}
+	}
+
+  return myCircle;
+}
+
+var myCircle = createCircleWithLiteralNotation();
+alert(myCircle.diameter());
+alert(myCircle.circumference());
+alert(myCircle.area());
+
+</script>
+</head>
+<body>
+</body>
+</html>

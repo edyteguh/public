@@ -1,0 +1,43 @@
+<html>
+<head>
+<script type="text/javascript">
+// practice module pattern
+var Lingkaran = (function() {
+	public = {};
+
+	public.constantPi = 3.141;
+	public.radius = 5;
+
+	return public;
+})()
+
+// extend module with new function
+var Lingkaran = (function(oldLingkaran){
+	oldLingkaran.diameter = function() {
+		return 2 * oldLingkaran.radius;
+	}()
+  // don't forget the above two parentheses that immediately execute the function 
+
+	return oldLingkaran;
+})(Lingkaran)
+
+// extend module with new function
+var Lingkaran = (function(oldLingkaran) {
+		oldLingkaran.keliling = function() {
+			return 2 * oldLingkaran.constantPi * oldLingkaran.radius;
+		}()
+    // don't forget the above two parentheses that immediately execute the function
+
+		return oldLingkaran;
+})(Lingkaran)
+
+//Lingkaran.radius = 10;
+alert("radius = " + Lingkaran.radius);
+alert("diameter = " + Lingkaran.diameter);
+alert("keliling = " + Lingkaran.keliling);
+
+</script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+	<head>
+		<title>JS Programmer's reference</title>
+	</head>
+	<body>
+		<p class="pagedContainer" id="pagedContainer">
+			<span class="pagedContent">page 1 content</span>		
+			<span class="pagedContent">page 2 content</span>		
+			<span class="pagedContent">page 3 content</span>		
+			<span class="pagedContent">page 4 content</span>		
+			<span class="pagedContent">page 5 content</span>		
+		</p>
+	<script>
+	var myPagedContents = document.getElementsByClassName("pagedContent");
+	var myPagedContentsLength = myPagedContents.length;
+	var hideme = function() {
+		for ( var i=0; i<myPagedContentsLength; i++) {
+			myPagedContents[i].style.display = "none";
+		}
+	}
+	hideme();
+	var firstElement = document.getElementById("pagedContainer").firstElementChild;
+	//alert(firstElement);
+	firstElement.innerText = "here is me";
+	firstElement.style.display = "inline";
+	//alert(firstElement.innerText);
+	</script>
+	</body>
+</html>

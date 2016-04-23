@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+	<head>
+		<title>JS Programmer's reference</title>
+	</head>
+	<body>
+	<p id="myParagraph">This is my paragraph!
+	<span class="hideme">Lorem ipsum</span>
+	dolor sit amet.
+	<span></span>
+	</p>
+	<p class="hideme">
+		Another paragraph!
+	</p>
+	<script>
+	var mySpans = document.getElementsByClassName("hideme");
+	var mySpansLength = mySpans.length;
+
+	for ( var i=0; i<mySpansLength; i++ ) {
+		mySpans[i].style.display = "none";
+	}
+	</script>
+	</body>
+</html>

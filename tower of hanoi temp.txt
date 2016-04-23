@@ -1,0 +1,23 @@
+
+3 peg, 3 > 1 use t2		2 peg,from 2 to 1 t3
+p1 : t3 > t1				p1 : t2 > t3
+p2 : t3 > t2				p2 : t2 > t1
+p1 : t1 > t2				p1 : t3 > t1
+p3 : t3 > t1
+
+step 1 :
+2 peg, 3 >> 2 use 1
+p1: t3 >> t1
+p2: t3 >> t2
+p1: t1 >> t2
+
+step 2 :
+p3: t3 >> t1
+
+step 3:
+2 peg, 2 >> 1 use 3
+p1: t2 >> t3
+p2: t2 >> t1
+p1: t3 >> t1
+
+

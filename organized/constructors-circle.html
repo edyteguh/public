@@ -1,0 +1,32 @@
+<html>
+<head>
+<script type="text/javascript">
+function createCircle() {
+	this.radius = 10;
+	var _pi = 3.141;
+	this.diameter = function() {
+		var result= 2 * this.radius;
+		return result;
+	}
+
+	this.circumference = function() {
+		var result= 2 * _pi * this.radius;
+		return result;
+	}
+
+	this.area = function() {
+		var result= _pi * this.radius * this.radius;
+		return result;
+	}
+}
+
+var myCircle = new createCircle();
+alert(myCircle.diameter());
+alert(myCircle.circumference());
+alert(myCircle.area());
+
+</script>
+</head>
+<body>
+</body>
+</html>

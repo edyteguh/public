@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+	<head>
+		<title>JS Programmer's reference</title>
+	</head>
+	<body>
+	<p id="myParagraph">This is my paragraph!
+	<span class="hideme">Lorem ipsum</span>
+	dolor sit amet.
+	<span></span>
+	</p>
+	<p class="sideme">
+		Another paragraph!
+	</p>
+	<script>
+	var myPars = document.getElementsByTagName("p");
+	var mySpans = document.getElementsByTagName("span");
+	var myParsLength = myPars.length;
+	var mySpansLength = mySpans.length;
+	for ( var i=0; i<myParsLength; i++ ) {
+		myPars[i].style.backgroundColor = "red";
+	}
+
+	for ( var i=0; i<mySpansLength; i++ ) {
+		mySpans[i].innerText = "cruising";
+	}
+	</script>
+	</body>
+</html>

@@ -1,0 +1,19 @@
+<html>
+<head>
+<script type="text/javascript" src="etaLib.js"></script>
+<script type="text/javascript">
+// immediately invoked function
+function greet(myName) {
+	var myAlertString = "Hello " + myName;
+	(function doAlert() {
+		alert(myAlertString);
+	})()
+}
+
+greet("Kitty");
+greet("µTorrent");
+</script>
+</head>
+<body>
+</body>
+</html>

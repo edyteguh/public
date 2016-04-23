@@ -1,0 +1,36 @@
+<html>
+<head>
+<script type="text/javascript">
+function enumerateObjectOldWays(o) {
+	var thing,
+	strMessage = "old ways - \n";
+	for ( thing in o ) {
+		strMessage += "targetObject." + thing + " = " + o[thing] + "\n";
+	}
+	alert(strMessage);
+}
+
+// new ways, works only javascript 5 ++ i think
+function enumerateObject(o) {
+	var arrKeys = Object.keys(o),
+	strMessage = "",
+	i = 0,
+	arrKeysLength = arrKeys.length;
+
+	for (i=0; i<arrKeysLength; i++) {
+		strMessage += "myObject." + arrKeys[i] + " = " + o[arrKeys[i]] + "\n";
+	}
+	alert(strMessage);
+}
+
+var mahasiswa = {};
+mahasiswa.nama = "Edy";
+mahasiswa.npm = "0495037109";
+
+enumerateObjectOldWays(mahasiswa);
+enumerateObject(mahasiswa);
+</script>
+</head>
+<body>
+</body>
+</html>

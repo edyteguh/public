@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+	<head>
+		<title>JS Programmer's reference</title>
+	</head>
+	<body>
+	<p id="myParagraph">This is my paragraph!
+	<span class="hideme">Lorem ipsum</span>
+	dolor sit amet.
+	<span></span>
+	</p>
+	<p class="hideme">
+		Another paragraph!
+	</p>
+	<script>
+	var mySpans = document.querySelector("#myParagraph span:last-child");
+	// querySelectorAll will return more than 1 results ...
+
+	mySpans.innerText = "Not empty anymore";
+	</script>
+	</body>
+</html>

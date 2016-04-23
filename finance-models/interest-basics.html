@@ -1,0 +1,59 @@
+<html>
+<head>
+<script type="text/javascript">
+/*
+C1 = (1 + r) C0
+if r=10%, C1 = (1+0.1) C0 = 1.1C0
+
+*/
+function calculateConsumptionBasic(c0,rate) {
+  var c1;
+  c1 = (1 + rate) * c0;
+
+  return c1;
+}
+
+function presentValueOfMoney(c0,c1,rate) {
+  var d;
+
+  d = c0 + (1 / (1+rate)) * c1;
+
+  return d;
+}
+
+function budgetaryConstraint(presentValueOfMoney,rate) {
+  var h;
+  h = presentValueOfMoney * ( 1 + rate);
+  return h;
+}
+
+function consumptionFuture(presentConsumption,budgetaryConstraint,rate) {
+  var c1;
+  c1 = -(1 + rate) * presentConsumption + budgetaryConstraint;
+  return c1;
+}
+
+
+// calculate consumption test
+var initialC = 1000000;
+var futureC = calculateConsumptionBasic(initialC,0.1);
+//alert(futureC);
+
+// if i want to know how much my "future" consumption can be traded into "present" consumption
+// let's say i plan a consumption next year in the amount of 2000000
+futureC =  2000000;
+var d = presentValueOfMoney(initialC,futureC,0.1);
+//alert(d);
+
+// budgetaryConstraint
+var h = budgetaryConstraint(d,0.1);
+//alert(h);
+
+// future consumption
+var c1 = consumptionFuture(initialC,h,0.1);
+alert(c1);
+</script>
+</head>
+<body>
+</body>
+</html>

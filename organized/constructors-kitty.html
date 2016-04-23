@@ -1,0 +1,20 @@
+<html>
+<head>
+<script type="text/javascript">
+// a common convention for constructors is to capitalize their first letter
+function Kitty() {
+	this.soft = true;
+	this.temperature = "warm";
+	this.vocalize = function() {
+		alert('Purr,purr,purr');
+	}
+}
+var myKitty = new Kitty;
+alert(myKitty.soft);
+alert(myKitty.temperature);
+myKitty.vocalize();
+</script>
+</head>
+<body>
+</body>
+</html>
